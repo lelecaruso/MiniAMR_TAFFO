@@ -1,0 +1,27 @@
+Last login: Thu Apr 25 15:20:00 on ttys000
+emanuele@MBP-di-emanuele ~ % cd miniAMR
+emanuele@MBP-di-emanuele miniAMR % cd ref
+emanuele@MBP-di-emanuele ref % make base
+make: Nothing to be done for `base'.
+emanuele@MBP-di-emanuele ref % $HOME/.local/bin -q -n100 ./miniAMR.base --num_refine 4 --max_blocks 900 --init_x 1 --init_y 1 --init_z 1 --npx 1 --npy 1 --npz 1 --nx 8 --ny 8 --nz 8 --num_objects 1 --object 2 0 -1.71 -1.71 -1.71 0.04 0.04 0.04 1.7 1.7 1.7 0.0 0.0 0.0 --num_tsteps 10 --checksum_freq 1 --seed 666
+
+----------------[ Timing report for 100 runs ]----------------
+               Wall          CPU         User       System
+Total        58.848s      53.064s      36.993s      16.071s 
+Median      585.860ms    528.463ms    369.329ms    159.823ms
+Average     588.477ms    530.642ms    369.931ms    160.711ms
+Std dev      24.140ms     13.153ms      7.811ms      6.136ms
+Minimum     561.666ms    510.440ms    359.774ms    148.043ms
+Maximum     793.704ms    607.625ms    416.982ms    193.374ms
+emanuele@MBP-di-emanuele ref % $HOME/.local/bin -q -n100 ./miniAMR.x --num_refine 4 --max_blocks 900 --init_x 1 --init_y 1 --init_z 1 --npx 1 --npy 1 --npz 1 --nx 8 --ny 8 --nz 8 --num_objects 1 --object 2 0 -1.71 -1.71 -1.71 0.04 0.04 0.04 1.7 1.7 1.7 0.0 0.0 0.0 --num_tsteps 10 --checksum_freq 1 --seed 666
+
+----------------[ Timing report for 100 runs ]----------------
+               Wall          CPU         User       System
+Total        58.858s      53.138s      37.383s      15.755s 
+Median      588.431ms    531.432ms    374.442ms    157.411ms
+Average     588.585ms    531.382ms    373.830ms    157.552ms
+Std dev      12.367ms      8.509ms      4.526ms      4.733ms
+Minimum     570.006ms    513.120ms    364.518ms    146.584ms
+Maximum     679.558ms    581.810ms    398.805ms    183.005ms
+emanuele@MBP-di-emanuele ref % nano makefile
+emanuele@MBP-di-emanuele ref % 
